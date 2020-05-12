@@ -1,0 +1,52 @@
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple MusicPlayer</title>
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/animation.css" />
+  <!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap&subset=korean" rel="stylesheet"/>
+</head>
+<body>
+  <div class="container">
+    <h1 class="a11yHidden">뮤직플레이어</h1>
+    <section class="player">
+      <audio id="audio" src=""></audio>
+      <div class="playerContentArea">
+        <div class="musicTitle">
+          <h2 id="musicTitle">Morning Mandolin</h2>
+          <p id="composer">chris haugen</p>
+        </div>
+        <ul class="playBtnList">
+          <li><button name="play" type="button" class="screen-reader" id="playBtn">재생</button></li>
+          <li><button name="pre" type="button" class="screen-reader" id="prevBtn">이전곡</button></li>
+          <li><button name="next" type="button" class="screen-reader" id="nextBtn">다음곡</button></li>
+        </ul>
+        <button name="list" type="button" class="listBtn">재생목록열기</button>
+        <button name="sound" type="button" class="soundBtn">사운드</button>
+        <div class="progressArea">
+          <input id="progressbar" class="rangeCustom" type="range">
+          <ul class="timeSeting">
+            <li id="audioCurrentTime"></li>
+            <li id="audioDuration"></li>
+          </ul>
+        </div>
+        <!-- <div>
+          <ul class="animation">
+            <li class="ani_box01"></li>
+            <li class="ani_box02"></li>
+            <li class="ani_box03"></li>
+          </ul>
+        </div> -->
+      </div>
+    </section>
+    <section class="listContainer">
+      <h2>재생목록</h2>
+      <ul class="playList">
+      </ul>
+    </section>
+  </div>
+  <script src="./js/player.js"></script>
+</body>
+</html>
